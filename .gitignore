@@ -1,0 +1,52 @@
+# Environment files
+.env.local
+.env.production.local
+
+# Docker
+.docker/
+
+# Logs
+*.log
+logs/
+
+# Data directories
+data/
+volumes/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# AWS credentials (never commit)
+aws-credentials
+.aws/
+
+# Terraform state and configuration files
+.terraform
+*.tfstate
+*.tfstate.backup
+
+# claude
+.claude/
