@@ -1,0 +1,73 @@
+# Environment files
+.env.local
+.env.production.local
+
+# Docker
+.docker/
+
+# Logs
+*.log
+logs/
+
+# Data directories
+data/
+volumes/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# AWS credentials (never commit)
+aws-credentials
+.aws/
+
+# Terraform state and configuration files
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+.terraform.lock.hcl
+tfplan*
+tfplan-*
+.current_plan
+.rebuild_processing_engine
+crash.log
+crash.*.log
+terraform.rc
+.terraformrc
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Lambda deployment packages (generated files)
+**/lambda.zip
+**/lambda/*.zip
+
+# claude
+.claude/
+terraform/terraform.tfstate.backup-pre-refactor
+
+*.hcl
