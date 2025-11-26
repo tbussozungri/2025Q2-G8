@@ -77,6 +77,7 @@ aws configure
 
    # Paso 2: Hacer ejecutables los scripts
    chmod +x terraform/scripts/*.sh
+   chmod +x terraform/send_sensor_data.sh
    
    # Paso 3: Ejecutar el siguiente script para comenzar con el deploy
    ./terraform/scripts/deploy.sh 
