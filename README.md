@@ -111,13 +111,14 @@ Para poder probar el correcto funcionamiento de la aplicación se deben correr l
 
 Primero está el script que envía datos de sensores. Se va a solicitar el ID del usuario en cuestión, para poder asociar a dicho ID los datos que se envian.
 
-Importante: El ID se enceuntra en la parte superior derecha, una vez realizada la autenticación mediante cognito.
+Importante: El ID se encuentra en la parte superior derecha (debajo del mail del usuario), una vez realizada la autenticación mediante cognito.
 
 ```bash
 	cd terraform
-	./send_sendor_data.sh
+	./send_sensor_data.sh
    cd ..
 ```
+El programa le solicitará que ingrese el número de ID del usuario.
 
 Luego el script para cargar imágenes. También le solicitará el ID del usuario para el que quiere asociar las imágenes y además la ruta donde están las imágenes que quiere cargar.
 
@@ -127,7 +128,22 @@ Hay que ejecutarlo parado /terraform/scripts
    cd terraform/scripts/
 	./upload_directory_images.sh
 ```
+El script recibe dos parámetros:
+1. La ruta del directorio donde se encuentran las imágenes a subir.
+2. El ID del usuario
 
+ejemplo:
+```bash
+   ./upload_directory_images.sh ./images/ 1
+```
+
+## Uso de la aplicación
+
+Es importante una vez autenticado, establecer los umbrales para poder recibir las alarmas. Una vez hecho esto se podrán visualizar el promedio de las mediciones de los sensores y las alarmas disparadas.
+
+También hay una sección en donde se pueden ver las imágenes subidas con un procesamiento para detectar situaciones irregulares.
+
+Finalmente hay un apartado para la generación de reportes (en donde se emplea la APIKey) , y se puede obtener un reporte basado en los resultados arrojados por los sensores.
 ## Elección de arquitectura
 
 Agrosynchro Cloud Architecture
